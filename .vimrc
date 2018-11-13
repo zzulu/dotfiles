@@ -10,7 +10,7 @@ set ruler " Show current position (row, column)
 set history=1000
 
 set undofile
-set undodir=~/.vim/.undodir/
+set undodir=~/.vim/.undodir/ " The directory is required
 
 set showcmd " Show commands right below 
 set showmode " Show current mode (Default. The opposite is 'noshowmode')
