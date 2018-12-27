@@ -1,0 +1,65 @@
+{
+	"color_scheme": "Packages/ayu/ayu-dark.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"/db/*.sqlite3",
+		"/db/*.sqlite3-journal",
+		"log/*.log"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".bundle",
+		"tmp/*",
+		"log/*",
+		".sass-cache",
+		"_site",
+		".jekyll-metadata",
+		"__pycache__",
+		"node_modules",
+		"build"
+	],
+	"font_face": "Source Code Pro",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"open_files_in_new_window": false,
+	"scroll_past_end": true,
+	"show_git_status": false,
+	"tab_size": 2,
+	"theme": "ayu-dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"ui_big_tabs": true,
+	"ui_fix_tab_labels": true,
+	"ui_font_source_code_pro": true,
+	"ui_separator": true
+}
+
