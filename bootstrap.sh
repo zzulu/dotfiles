@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd -P)"
+DOTFILES_DIR=$HOME/dotfiles
 
 # .gitconfig
 ln -sf $DOTFILES_DIR/.gitconfig $HOME/.gitconfig
