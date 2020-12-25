@@ -7,7 +7,7 @@ DOTFILES_DIR=$HOME/dotfiles
 ln -sf $DOTFILES_DIR/.gitconfig $HOME/.gitconfig
 
 if [ ! -d $HOME/Codes/Education ]; then mkdir -p $HOME/Codes/Education; fi
-ln -sf $DOTFILES_DIR/.gitconfig_edu $HOME/Codes/Education/.gitconfig
+ln -sf $DOTFILES_DIR/.gitconfig.edu $HOME/Codes/Education/.gitconfig
 
 # .vimrc
 if [ ! -d $HOME/.vim/undo ]; then mkdir -p $HOME/.vim/undo; fi
