@@ -1,0 +1,5 @@
+[core]
+  sshCommand = ssh -i ~/.ssh/id_ed25519_edu
+[user]
+  name = Junwoo Hwang
+  email = no.water.in.the.house@gmail.com

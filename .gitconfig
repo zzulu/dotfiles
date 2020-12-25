@@ -7,3 +7,5 @@
   rebase = false
 [alias]
   tree = log --graph --oneline --abbrev-commit
+[includeIf "gitdir:~/Codes/Education/"]
+  path = ~/Codes/Education/.gitconfig
