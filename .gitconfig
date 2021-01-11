@@ -1,6 +1,7 @@
 [user]
   name = Junwoo Hwang
   email = zzulu.hwang@gmail.com
+  signingkey = 71C2505BD1C7546B
 [init]
 	defaultBranch = main
 [pull]
