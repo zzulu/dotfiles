@@ -2,6 +2,8 @@
   name = Junwoo Hwang
   email = zzulu.hwang@gmail.com
   signingkey = 71C2505BD1C7546B
+[core]
+  editor = vim
 [init]
 	defaultBranch = main
 [pull]
