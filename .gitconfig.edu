@@ -3,3 +3,5 @@
 [user]
   name = Junwoo Hwang
   email = no.water.in.the.house@gmail.com
+[commit]
+  gpgsign = false
