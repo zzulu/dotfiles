@@ -35,3 +35,4 @@ set tabstop=2
 set hlsearch " Highlight serach results
 set incsearch " Incremental search (Makes search act like search in modern browsers)
 
+filetype plugin on
