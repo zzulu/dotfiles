@@ -10,6 +10,8 @@
   defaultBranch = main
 [pull]
   rebase = false
+[push]
+	autoSetupRemote = true
 [alias]
   tree = log --graph --oneline --abbrev-commit
 [includeIf "gitdir:~/Codes/Educations/**"]
