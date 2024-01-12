@@ -1,6 +1,16 @@
 set encoding=utf-8
+set nocompatible " Use Vim defaults instead of 100% vi compatibility
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
 
 syntax on
+filetype plugin on
 
 set wrap
 set linebreak
@@ -35,4 +45,5 @@ set tabstop=2
 set hlsearch " Highlight serach results
 set incsearch " Incremental search (Makes search act like search in modern browsers)
 
-filetype plugin on
+" About interface
+set laststatus=2 " Always display the status line
