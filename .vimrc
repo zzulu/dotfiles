@@ -8,6 +8,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
+
 Plugin 'prisma/vim-prisma'
 
 call vundle#end()
@@ -66,6 +68,14 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.git|node_modules)$',
   \ }
+
+" vim-gitgutter
+set signcolumn=yes
+set updatetime=100
+highlight SignColumn      guibg=NONE    ctermbg=NONE
+highlight GitGutterAdd    guifg=#37b24d ctermfg=2
+highlight GitGutterChange guifg=#f59f00 ctermfg=3
+highlight GitGutterDelete guifg=#f03e3e ctermfg=1
 
 " Remap keys
 nnoremap <C-d> <C-d>zz
