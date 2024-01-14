@@ -6,15 +6,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
+filetype plugin indent on
+
 syntax on
-filetype plugin on
 
 set wrap
 set linebreak
 set number " Show line numbers
+set relativenumber " Show relative line numbers
 set ruler " Show current position (row, column)
 
 set history=1000
@@ -32,7 +36,7 @@ set noswapfile
 set nobackup
 set nowb
 
-" About indentation
+" Indentation
 set autoindent
 set smartindent
 set smarttab
@@ -41,9 +45,24 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 
-" About search
+" Search
 set hlsearch " Highlight serach results
 set incsearch " Incremental search (Makes search act like search in modern browsers)
 
-" About interface
+" Interface
 set laststatus=2 " Always display the status line
+set splitright " Open vertical splits to the right
+
+" Netrw
+let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
+let g:netrw_liststyle=3 " Tree style listing
+
+" vim-polyglot
+set re=0
+
+" CtrlP
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" Remap keys
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
