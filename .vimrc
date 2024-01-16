@@ -1,22 +1,19 @@
 set encoding=utf-8
 set nocompatible " Use Vim defaults instead of 100% vi compatibility
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim-plug
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'prisma/vim-prisma'
 
-Plugin 'prisma/vim-prisma'
+call plug#end()
 
-call vundle#end()
 
 filetype plugin indent on
-
-syntax on
+syntax enable
 
 set wrap
 set linebreak
