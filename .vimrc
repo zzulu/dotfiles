@@ -58,7 +58,6 @@ set splitright " Open vertical splits to the right
 
 " Netrw
 let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
-let g:netrw_liststyle=3 " Tree style listing
 
 " vim-polyglot
 set re=0
@@ -77,6 +76,7 @@ highlight GitGutterAdd    guifg=#37b24d ctermfg=2
 highlight GitGutterChange guifg=#f59f00 ctermfg=3
 highlight GitGutterDelete guifg=#f03e3e ctermfg=1
 
-" Remap keys
+
+" Key mappings
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
