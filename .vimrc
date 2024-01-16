@@ -7,6 +7,7 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'dense-analysis/ale'
 Plug 'prisma/vim-prisma'
 
 call plug#end()
@@ -26,7 +27,7 @@ set history=1000
 set undofile
 set undodir=~/.vim/undo/ " The directory is required
 
-set showcmd " Show commands right below 
+set showcmd " Show commands right below
 set showmode " Show current mode (Default. The opposite is 'noshowmode')
 
 set autoread " Set to auto read when a file is changed from the outside
@@ -73,6 +74,11 @@ highlight GitGutterAdd    guifg=#37b24d ctermfg=2
 highlight GitGutterChange guifg=#f59f00 ctermfg=3
 highlight GitGutterDelete guifg=#f03e3e ctermfg=1
 
+" ale
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
 
 " Key mappings
 nnoremap <C-d> <C-d>zz
