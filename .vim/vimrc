@@ -17,7 +17,7 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-set wrap
+set nowrap
 set linebreak
 set number " Show line numbers
 set relativenumber " Show relative line numbers
