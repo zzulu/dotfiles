@@ -64,7 +64,7 @@ set re=0
 " CtrlP
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|node_modules)$',
+  \   'dir':  '\v[\/](\.git|node_modules)$',
   \ }
 
 " vim-gitgutter
@@ -78,21 +78,14 @@ highlight GitGutterDelete guifg=#f03e3e ctermfg=1
 " ale
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\}
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \ }
 
 " coc.nvim
-let g:copilot_no_tab_map = v:true
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ exists('b:_copilot.suggestions') ? copilot#Accept("\<CR>") :
-      \ CheckBackSpace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+highlight CocFloating ctermbg=DarkGray guibg=DarkGray
+inoremap <silent><expr> <c-@> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-highlight CocFloating ctermbg=DarkGray guibg=DarkGray
-
 
 " Key mappings
 nnoremap <C-d> <C-d>zz
