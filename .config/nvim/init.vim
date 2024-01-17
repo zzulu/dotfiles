@@ -13,6 +13,7 @@ call plug#end()
 " General
 set number
 set relativenumber
+set undofile
 
 set nowrap
 set smartindent
