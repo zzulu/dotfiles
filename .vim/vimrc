@@ -1,6 +1,9 @@
 set encoding=utf-8
 set nocompatible " Use Vim defaults instead of 100% vi compatibility
 
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 " vim-plug
 call plug#begin()
 
