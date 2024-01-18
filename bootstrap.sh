@@ -12,6 +12,8 @@ ln -snf $DOTFILES_DIR/.gitconfig.edu $HOME/Codes/Educations/.gitconfig
 # .vimrc
 if [ ! -d $HOME/.vim ]; then mkdir -p $HOME/.vim; fi
 if [ ! -d $HOME/.vim/undo ]; then mkdir -p $HOME/.vim/undo; fi
+if [ ! -d $HOME/.vim/swap ]; then mkdir -p $HOME/.vim/swap; fi
+if [ ! -d $HOME/.vim/backup ]; then mkdir -p $HOME/.vim/backup; fi
 ln -snf $DOTFILES_DIR/.vim/ftplugin $HOME/.vim/ftplugin
 ln -snf $DOTFILES_DIR/.vim/vimrc $HOME/.vim/vimrc
 

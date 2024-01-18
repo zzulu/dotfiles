@@ -1,9 +1,6 @@
 set encoding=utf-8
 set nocompatible " Use Vim defaults instead of 100% vi compatibility
 
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
 " vim-plug
 call plug#begin()
 
@@ -16,53 +13,49 @@ Plug 'prisma/vim-prisma'
 
 call plug#end()
 
-
 filetype plugin indent on
 syntax enable
 
-set nowrap
-set linebreak
-set number " Show line numbers
-set relativenumber " Show relative line numbers
-set ruler " Show current position (row, column)
-
-set history=1000
-
-set undofile
-set undodir=~/.vim/undo/ " The directory is required
-
-set showcmd " Show commands right below
-set showmode " Show current mode (Default. The opposite is 'noshowmode')
-
+" General
 set autoread " Set to auto read when a file is changed from the outside
+set regexpengine=0 " Automatic detection of the regexp engine to use
 
-" Turn backup off
-set noswapfile
-set nobackup
-set nowb
+" Editor
+set backspace=indent,eol,start " Make backspace behave like every other editor
 
-" Indentation
 set autoindent
 set smartindent
 set smarttab
 set expandtab " Use spaces instead of tabs
+
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+
+" Interface
+set number " Show line numbers
+set relativenumber " Show relative line numbers
+set nowrap " Do not wrap lines
+
+set ruler " Show current position (row, column)
+set showcmd " Show commands right below
+set showmode " Show current mode (Default. The opposite is 'noshowmode')
+set laststatus=2 " Always display the status line
+set splitright " Open vertical splits to the right
 
 " Search
 set hlsearch " Highlight serach results
 set incsearch " Incremental search (Makes search act like search in modern browsers)
 
-" Interface
-set laststatus=2 " Always display the status line
-set splitright " Open vertical splits to the right
+" History, Undo, Swap, Backup
+set history=1000
+set undofile
+set undodir=~/.vim/undo/ " The directory is required
+set directory=~/.vim/swap/ " The directory is required
+set backupdir=~/.vim/backup/ " The directory is required
 
 " Netrw
 let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
-
-" vim-polyglot
-set re=0
 
 " CtrlP
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
