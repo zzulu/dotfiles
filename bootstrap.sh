@@ -15,7 +15,7 @@ if [ ! -d $HOME/.vim/undo ]; then mkdir -p $HOME/.vim/undo; fi
 if [ ! -d $HOME/.vim/swap ]; then mkdir -p $HOME/.vim/swap; fi
 if [ ! -d $HOME/.vim/backup ]; then mkdir -p $HOME/.vim/backup; fi
 ln -snf $DOTFILES_DIR/.vim/ftplugin $HOME/.vim/ftplugin
-ln -snf $DOTFILES_DIR/.vim/vimrc $HOME/.vim/vimrc
+ln -snf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
 # Neovim
 if [ ! -d $HOME/.config ]; then mkdir -p $HOME/.config; fi
