@@ -8,7 +8,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prisma/vim-prisma'
 
 call plug#end()
@@ -76,12 +75,6 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ }
-
-" coc.nvim
-highlight CocFloating ctermbg=DarkGray guibg=DarkGray
-inoremap <silent><expr> <c-@> coc#refresh()
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Key mappings
 nnoremap <C-d> <C-d>zz
