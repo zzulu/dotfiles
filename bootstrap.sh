@@ -17,11 +17,6 @@ if [ ! -d $HOME/.vim/backup ]; then mkdir -p $HOME/.vim/backup; fi
 ln -snf $DOTFILES_DIR/.vim/ftplugin $HOME/.vim/ftplugin
 ln -snf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
-# Neovim
-if [ ! -d $HOME/.config ]; then mkdir -p $HOME/.config; fi
-if [ ! -d $HOME/.config/nvim ]; then mkdir -p $HOME/.config/nvim; fi
-ln -snf $DOTFILES_DIR/.config/nvim/init.vim $HOME/.config/nvim/init.vim
-
 # DefaultkeyBinding.dict (macOS)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   if [ ! -d $HOME/Library/KeyBindings ]; then mkdir -p $HOME/Library/KeyBindings; fi
