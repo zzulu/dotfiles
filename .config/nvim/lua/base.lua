@@ -1,9 +1,7 @@
-vim.cmd('autocmd!')
-
+-- Encoding
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
-
 
 -- Editor
 vim.opt.smartindent = true
@@ -20,4 +18,3 @@ vim.opt.splitright = true -- Open vertical splits to the right
 
 -- History, Undo, Swap, Backup
 vim.opt.undofile = true
-
