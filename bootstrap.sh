@@ -20,10 +20,10 @@ ln -snf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 # Neovim
 if [ ! -d $HOME/.config ]; then mkdir -p $HOME/.config; fi
 if [ ! -d $HOME/.config/nvim ]; then mkdir -p $HOME/.config/nvim; fi
-if [ ! -d $HOME/.config/nvim/lua ]; then mkdir -p $HOME/.config/nvim/lua; fi
 if [ ! -d $HOME/.config/nvim/after ]; then mkdir -p $HOME/.config/nvim/after; fi
 if [ ! -d $HOME/.config/nvim/plugin ]; then mkdir -p $HOME/.config/nvim/plugin; fi
-ln -snf $DOTFILES_DIR/.config/nvim/init.vim $HOME/.config/nvim/init.vim
+ln -snf $DOTFILES_DIR/.config/nvim/lua $HOME/.config/nvim/lua
+ln -snf $DOTFILES_DIR/.config/nvim/init.lua $HOME/.config/nvim/init.lua
 
 if which nvim > /dev/null; then
   ln -snf $(which nvim) $HOME/.local/bin/nv
