@@ -79,3 +79,6 @@ let g:ale_fixers = {
 " Key mappings
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+
+" Do not yank with x
+nnoremap x "_x
