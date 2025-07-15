@@ -4,6 +4,7 @@ set nocompatible " Use Vim defaults instead of 100% vi compatibility
 " vim-plug
 call plug#begin()
 
+Plug 'github/copilot.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
