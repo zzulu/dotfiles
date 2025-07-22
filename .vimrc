@@ -6,11 +6,13 @@ call plug#begin()
 
 Plug 'github/copilot.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 Plug 'prisma/vim-prisma'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -59,14 +61,14 @@ set backupdir=~/.vim/backup/ " The directory is required
 let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
 
 " CtrlP
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-let g:ctrlp_custom_ignore = {
-  \   'dir':  '\v[\/](\.git|node_modules)$',
-  \ }
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" let g:ctrlp_custom_ignore = {
+"   \   'dir':  '\v[\/](\.git|node_modules)$',
+"   \ }
 
 " vim-gitgutter
 set signcolumn=yes
-set updatetime=100
+set updatetime=300
 highlight SignColumn      guibg=NONE    ctermbg=NONE
 highlight GitGutterAdd    guifg=#37b24d ctermfg=2
 highlight GitGutterChange guifg=#f59f00 ctermfg=3
@@ -114,3 +116,10 @@ function! CheckBackspace() abort
 endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" fzf.vim
+let g:fzf_vim = {}
+
+nnoremap <C-p> :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>rg :Rg<Space>
