@@ -8,7 +8,6 @@ Plug 'github/copilot.vim'
 Plug 'sheerun/vim-polyglot'
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'dense-analysis/ale'
 Plug 'prisma/vim-prisma'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -22,6 +21,9 @@ syntax enable
 " General
 set autoread " Set to auto read when a file is changed from the outside
 set regexpengine=0 " Automatic detection of the regexp engine to use
+
+" Theme
+colorscheme unokai
 
 " Editor
 set backspace=indent,eol,start " Make backspace behave like every other editor
@@ -74,12 +76,6 @@ highlight GitGutterAdd    guifg=#37b24d ctermfg=2
 highlight GitGutterChange guifg=#f59f00 ctermfg=3
 highlight GitGutterDelete guifg=#f03e3e ctermfg=1
 
-" ale
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-  \ }
-
 " Key mappings
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
@@ -88,9 +84,8 @@ nnoremap <C-u> <C-u>zz
 nnoremap x "_x
 
 " coc.nvim
-highlight CocFloating guibg=#303030 ctermbg=236
 highlight CocSearch guifg=#5fd7d7 ctermfg=81
-highlight CocListLine ctermbg=249 guibg=#b2b2b2
+highlight CocHintFloat guifg=#5fd7d7 ctermfg=81
 
 " Key mappings for completion
 inoremap <silent><expr> <Tab>
@@ -102,6 +97,11 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " GoTo code navigation
 nmap <silent><nowait> gd <Plug>(coc-definition)
@@ -145,6 +145,8 @@ command! -nargs=0 Format :call CocActionAsync('format')
 
 " fzf.vim
 let g:fzf_vim = {}
+
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
