@@ -147,8 +147,6 @@ command! -nargs=0 Format :call CocActionAsync('format')
 " fzf.vim
 let g:fzf_vim = {}
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
-
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>rg :Rg<Space>
