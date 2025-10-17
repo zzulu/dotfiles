@@ -61,7 +61,7 @@ set directory=~/.vim/swap/ " The directory is required
 set backupdir=~/.vim/backup/ " The directory is required
 
 " Netrw
-let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
+" let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
 
 " CtrlP
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
@@ -150,3 +150,21 @@ let g:fzf_vim = {}
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>rg :Rg<Space>
+
+" Delete multiple buffers using fzf
+function! s:list_buffers()
+  redir => list
+  silent ls
+  redir END
+  return split(list, "\n")
+endfunction
+
+function! s:delete_buffers(lines)
+  execute 'bwipeout' join(map(a:lines, {_, line -> split(line)[0]}))
+endfunction
+
+command! BD call fzf#run(fzf#wrap({
+  \ 'source': s:list_buffers(),
+  \ 'sink*': { lines -> s:delete_buffers(lines) },
+  \ 'options': '--multi --reverse --bind ctrl-a:select-all+accept'
+\ }))
