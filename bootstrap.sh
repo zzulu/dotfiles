@@ -29,6 +29,10 @@ if which nvim > /dev/null; then
   ln -snf $(which nvim) $HOME/.local/bin/nv
 fi
 
+# Ghostty
+if [ ! -d $HOME/.config/ghostty ]; then mkdir -p $HOME/.config/ghostty; fi
+ln -snf $DOTFILES_DIR/.config/ghostty/config $HOME/.config/ghostty/config
+
 # DefaultkeyBinding.dict (macOS)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   if [ ! -d $HOME/Library/KeyBindings ]; then mkdir -p $HOME/Library/KeyBindings; fi
