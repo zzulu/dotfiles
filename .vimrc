@@ -62,7 +62,7 @@ set directory=~/.vim/swap/ " The directory is required
 set backupdir=~/.vim/backup/ " The directory is required
 
 " Netrw
-" let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
+let g:netrw_banner = 0 " Disable banner (Can be toggled with 'I' key)
 
 " CtrlP
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
