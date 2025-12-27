@@ -34,7 +34,9 @@ if [ ! -d $HOME/.config/ghostty ]; then mkdir -p $HOME/.config/ghostty; fi
 ln -snf $DOTFILES_DIR/.config/ghostty/config $HOME/.config/ghostty/config
 
 # DefaultkeyBinding.dict (macOS)
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  if [ ! -d $HOME/Library/KeyBindings ]; then mkdir -p $HOME/Library/KeyBindings; fi
-  cp -f $DOTFILES_DIR/DefaultKeyBinding.dict $HOME/Library/KeyBindings/DefaultKeyBinding.dict
-fi
+case "$OSTYPE" in
+  darwin*)
+    if [ ! -d $HOME/Library/KeyBindings ]; then mkdir -p $HOME/Library/KeyBindings; fi
+    cp -f $DOTFILES_DIR/DefaultKeyBinding.dict $HOME/Library/KeyBindings/DefaultKeyBinding.dict
+  ;;
+esac
