@@ -25,7 +25,9 @@ set autoread " Set to auto read when a file is changed from the outside
 set regexpengine=0 " Automatic detection of the regexp engine to use
 
 " Theme
-colorscheme unokai
+if !empty(globpath(&rtp, 'colors/unokai.vim'))
+  colorscheme unokai
+endif
 
 " Editor
 set backspace=indent,eol,start " Make backspace behave like every other editor
