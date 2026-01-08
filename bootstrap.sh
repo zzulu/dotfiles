@@ -17,8 +17,10 @@ if [ ! -d $HOME/.vim/backup ]; then mkdir -p $HOME/.vim/backup; fi
 ln -snf $DOTFILES_DIR/.vim/ftplugin $HOME/.vim/ftplugin
 ln -snf $DOTFILES_DIR/.vimrc $HOME/.vimrc
 
-# Neovim
+# .config
 if [ ! -d $HOME/.config ]; then mkdir -p $HOME/.config; fi
+
+# Neovim
 if [ ! -d $HOME/.config/nvim ]; then mkdir -p $HOME/.config/nvim; fi
 if [ ! -d $HOME/.config/nvim/after ]; then mkdir -p $HOME/.config/nvim/after; fi
 if [ ! -d $HOME/.config/nvim/plugin ]; then mkdir -p $HOME/.config/nvim/plugin; fi
@@ -30,8 +32,7 @@ if which nvim > /dev/null; then
 fi
 
 # Ghostty
-if [ ! -d $HOME/.config/ghostty ]; then mkdir -p $HOME/.config/ghostty; fi
-ln -snf $DOTFILES_DIR/.config/ghostty/config $HOME/.config/ghostty/config
+ln -snf $DOTFILES_DIR/.config/ghostty $HOME/.config/ghostty
 
 # DefaultkeyBinding.dict (macOS)
 case "$OSTYPE" in
