@@ -9,6 +9,9 @@ ln -snf $DOTFILES_DIR/.gitconfig $HOME/.gitconfig
 if [ ! -d $HOME/Codes/Educations ]; then mkdir -p $HOME/Codes/Educations; fi
 ln -snf $DOTFILES_DIR/.gitconfig.edu $HOME/Codes/Educations/.gitconfig
 
+if [ ! -d $HOME/Codes/Codeit ]; then mkdir -p $HOME/Codes/Codeit; fi
+ln -snf $DOTFILES_DIR/.gitconfig.work $HOME/Codes/Codeit/.gitconfig
+
 # .vimrc
 if [ ! -d $HOME/.vim ]; then mkdir -p $HOME/.vim; fi
 if [ ! -d $HOME/.vim/undo ]; then mkdir -p $HOME/.vim/undo; fi

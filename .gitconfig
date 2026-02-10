@@ -17,6 +17,8 @@
   tree = log --graph --oneline --abbrev-commit
 [includeIf "gitdir:~/Codes/Educations/**"]
   path = ~/Codes/Educations/.gitconfig
+[includeIf "gitdir:~/Codes/Codeit/**"]
+  path = ~/Codes/Codeit/.gitconfig
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
