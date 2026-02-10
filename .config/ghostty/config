@@ -2,3 +2,4 @@ font-family = "Monaspace Neon"
 font-size = 14
 window-width = 112
 window-height = 36
+shell-integration-features = ssh-terminfo,ssh-env
