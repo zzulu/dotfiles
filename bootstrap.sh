@@ -31,6 +31,7 @@ ln -snf $DOTFILES_DIR/.config/nvim/lua $HOME/.config/nvim/lua
 ln -snf $DOTFILES_DIR/.config/nvim/init.lua $HOME/.config/nvim/init.lua
 
 if which nvim > /dev/null; then
+  if [ ! -d $HOME/.local/bin ]; then mkdir -p $HOME/.local/bin; fi
   ln -snf $(which nvim) $HOME/.local/bin/nv
 fi
 
