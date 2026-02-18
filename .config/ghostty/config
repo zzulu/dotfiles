@@ -1,6 +1,6 @@
 font-family = "Monaspace Neon"
 font-family = "Pretendard"
 font-size = 14
-window-width = 112
-window-height = 36
+window-width = 120
+window-height = 40
 shell-integration-features = ssh-terminfo,ssh-env
