@@ -1,7 +1,10 @@
 #!/bin/sh
-set -e
+set -euo pipefail
 
 DOTFILES_DIR=$HOME/.dotfiles
+
+# .zshrc
+ln -snf $DOTFILES_DIR/.zshrc $HOME/.zshrc
 
 # .gitconfig
 ln -snf $DOTFILES_DIR/.gitconfig $HOME/.gitconfig
