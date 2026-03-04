@@ -1,5 +1,5 @@
-# eomebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
@@ -15,14 +15,14 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
 eval "$(pyenv virtualenv-init -)"
 
 # nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
