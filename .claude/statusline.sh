@@ -9,9 +9,9 @@ week_reset=$(echo "$input" | jq -r '.rate_limits.seven_day.resets_at // empty')
 
 bar() {
   local p=$(printf '%.0f' "$1")
-  local filled=$((p / 10))
+  local filled=$((p / 5))
   [ "$p" -gt 0 ] && [ "$filled" -eq 0 ] && filled=1
-  local empty=$((10 - filled))
+  local empty=$((20 - filled))
   local b=''
   for i in $(seq 1 $filled); do b="${b}█"; done
   for i in $(seq 1 $empty); do b="${b}░"; done
