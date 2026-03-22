@@ -13,8 +13,8 @@ bar() {
   [ "$p" -gt 0 ] && [ "$filled" -eq 0 ] && filled=1
   local empty=$((20 - filled))
   local b=''
-  for i in $(seq 1 $filled); do b="${b}█"; done
-  for i in $(seq 1 $empty); do b="${b}░"; done
+  for ((i=0; i<filled; i++)); do b="${b}█"; done
+  for ((i=0; i<empty; i++)); do b="${b}░"; done
   echo "$b"
 }
 
