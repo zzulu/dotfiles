@@ -1,0 +1,35 @@
+#!/bin/bash
+
+input=$(cat)
+
+five=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
+week=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')
+five_reset=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty')
+week_reset=$(echo "$input" | jq -r '.rate_limits.seven_day.resets_at // empty')
+
+bar() {
+  local p=$(printf '%.0f' "$1")
+  local filled=$((p / 10))
+  [ "$p" -gt 0 ] && [ "$filled" -eq 0 ] && filled=1
+  local empty=$((10 - filled))
+  local b=''
+  for i in $(seq 1 $filled); do b="${b}█"; done
+  for i in $(seq 1 $empty); do b="${b}░"; done
+  echo "$b"
+}
+
+out=''
+
+if [ -n "$five" ]; then
+  r=''
+  [ -n "$five_reset" ] && r=" ($(date -r "$five_reset" '+%H:%M'))"
+  out="5h $(bar $five) $(printf '%.0f' "$five")%${r}"
+fi
+
+if [ -n "$week" ]; then
+  r=''
+  [ -n "$week_reset" ] && r=" ($(date -r "$week_reset" '+%a %H:%M'))"
+  out="${out}\n7d $(bar $week) $(printf '%.0f' "$week")%${r}"
+fi
+
+[ -n "$out" ] && echo -e "$out"

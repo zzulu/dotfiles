@@ -38,6 +38,11 @@ fi
 # Ghostty
 ln -snf $DOTFILES_DIR/.config/ghostty $HOME/.config/ghostty
 
+# Claude Code
+if [ ! -d $HOME/.claude ]; then mkdir -p $HOME/.claude; fi
+ln -snf $DOTFILES_DIR/.claude/settings.json $HOME/.claude/settings.json
+ln -snf $DOTFILES_DIR/.claude/statusline.sh $HOME/.claude/statusline.sh
+
 # DefaultkeyBinding.dict (macOS)
 case "$OSTYPE" in
   darwin*)
