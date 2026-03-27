@@ -18,18 +18,22 @@ bar() {
   echo "$b"
 }
 
+cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd // empty')
+folder=$(basename "$cwd")
+
 out=''
+[ -n "$folder" ] && out="${folder}"
 
 if [ -n "$five" ]; then
   r=''
   [ -n "$five_reset" ] && r=" ($(date -r "$five_reset" '+%H:%M'))"
-  out="5h $(bar $five) $(printf '%.0f' "$five")%${r}"
+  out="${out:+${out}\n}5h $(bar $five) $(printf '%.0f' "$five")%${r}"
 fi
 
 if [ -n "$week" ]; then
   r=''
   [ -n "$week_reset" ] && r=" ($(date -r "$week_reset" '+%a %H:%M'))"
-  out="${out}\n7d $(bar $week) $(printf '%.0f' "$week")%${r}"
+  out="${out:+${out}\n}7d $(bar $week) $(printf '%.0f' "$week")%${r}"
 fi
 
 [ -n "$out" ] && echo -e "$out"
