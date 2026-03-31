@@ -21,8 +21,19 @@ bar() {
 cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd // empty')
 folder=$(basename "$cwd")
 
+branch=''
+if [ -n "$cwd" ] && [ -d "$cwd/.git" ] || git -C "$cwd" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  branch=$(git -C "$cwd" symbolic-ref --short HEAD 2>/dev/null || git -C "$cwd" rev-parse --short HEAD 2>/dev/null)
+fi
+
 out=''
-[ -n "$folder" ] && out="${folder}"
+if [ -n "$folder" ]; then
+  if [ -n "$branch" ]; then
+    out="${folder}  ⎇ ${branch}"
+  else
+    out="${folder}"
+  fi
+fi
 
 if [ -n "$five" ]; then
   r=''
