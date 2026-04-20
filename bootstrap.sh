@@ -38,6 +38,11 @@ fi
 # Ghostty
 ln -snf "$DOTFILES_DIR/.config/ghostty" "$HOME/.config/ghostty"
 
+# Zed
+if [ ! -d "$HOME/.config/zed" ]; then mkdir -p "$HOME/.config/zed"; fi
+ln -snf "$DOTFILES_DIR/.config/zed/settings.json" "$HOME/.config/zed/settings.json"
+ln -snf "$DOTFILES_DIR/.config/zed/keymap.json" "$HOME/.config/zed/keymap.json"
+
 # Claude Code
 if [ ! -d "$HOME/.claude" ]; then mkdir -p "$HOME/.claude"; fi
 ln -snf "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude/settings.json"
