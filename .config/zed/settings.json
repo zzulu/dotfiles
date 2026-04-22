@@ -29,9 +29,6 @@
   "relative_line_numbers": "disabled",
   "buffer_font_family": "Monaspace Neon",
   "buffer_font_size": 14,
-  "buffer_line_height": {
-    "custom": 1.5
-  },
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "vertical_scroll_margin": 8,
   "theme": {
