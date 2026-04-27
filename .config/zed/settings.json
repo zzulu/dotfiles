@@ -1,4 +1,9 @@
 {
+  "buffer_font_size": 14.0,
+  "ui_font_size": 14.0,
+  "buffer_font_features": {
+    "calt": false,
+  },
   "git_panel": {
     "dock": "left"
   },
@@ -33,7 +38,6 @@
   "cursor_blink": false,
   "relative_line_numbers": "disabled",
   "buffer_font_family": "Monaspace Neon",
-  "buffer_font_size": 14,
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "vertical_scroll_margin": 8,
   "theme": {
