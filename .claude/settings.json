@@ -9,5 +9,7 @@
     "gopls-lsp@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "agentPushNotifEnabled": true
 }

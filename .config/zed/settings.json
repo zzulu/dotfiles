@@ -1,11 +1,13 @@
 {
+  "cli_default_open_behavior": "new_window",
   "terminal": {
-    "dock": "right"
+    "dock": "right",
+    "option_as_meta": true
   },
   "buffer_font_size": 14.0,
   "ui_font_size": 14.0,
   "buffer_font_features": {
-    "calt": false,
+    "calt": false
   },
   "git_panel": {
     "dock": "left"
@@ -15,6 +17,12 @@
   },
   "format_on_save": "off",
   "agent": {
+    "default_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+      "enable_thinking": true,
+      "effort": "medium"
+    },
     "dock": "right",
     "sidebar_side": "right",
     "favorite_models": [],
@@ -22,15 +30,7 @@
   },
   "seed_search_query_from_cursor": "selection",
   "agent_servers": {
-    "codex-acp": {
-      "type": "registry"
-    },
-    "github-copilot-cli": {
-      "type": "registry"
-    },
-    "claude-acp": {
-      "type": "registry"
-    }
+
   },
   "disable_ai": false,
   "edit_predictions": {
@@ -79,5 +79,5 @@
   },
   "title_bar": {
     "show_sign_in": false
-  },
+  }
 }
