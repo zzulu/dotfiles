@@ -74,3 +74,16 @@ case ":$PATH:" in
   *":$PNPM_HOME/bin:"*) ;;
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
+
+# tmux session attach
+ta() {
+  local session
+  session=$(tmux ls 2>/dev/null | fzf --height 40% --reverse | cut -d: -f1)
+  [[ -n "$session" ]] && tmux attach -t "$session"
+}
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=("$HOME/.docker/completions" $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
