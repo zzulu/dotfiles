@@ -2,18 +2,18 @@
   "cli_default_open_behavior": "new_window",
   "terminal": {
     "dock": "right",
-    "option_as_meta": true
+    "option_as_meta": true,
   },
   "buffer_font_size": 14.0,
   "ui_font_size": 14.0,
   "buffer_font_features": {
-    "calt": false
+    "calt": false,
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "gutter": {
-    "breakpoints": false
+    "breakpoints": false,
   },
   "format_on_save": "off",
   "agent": {
@@ -21,20 +21,18 @@
       "provider": "openai-subscribed",
       "model": "gpt-5.5",
       "enable_thinking": true,
-      "effort": "medium"
+      "effort": "medium",
     },
     "dock": "right",
     "sidebar_side": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "seed_search_query_from_cursor": "selection",
-  "agent_servers": {
-
-  },
+  "agent_servers": {},
   "disable_ai": false,
   "edit_predictions": {
-    "provider": "copilot"
+    "provider": "copilot",
   },
   "vim_mode": false,
   "base_keymap": "SublimeText",
@@ -46,38 +44,38 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Ayu Dark"
+    "dark": "Ayu Dark",
   },
   "icon_theme": "Colored Zed Icons Theme Dark",
   "vim": {
-    "use_system_clipboard": "on_yank"
+    "use_system_clipboard": "on_yank",
   },
   "git": {
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "project_panel": {
     "dock": "left",
-    "auto_fold_dirs": false
+    "auto_fold_dirs": false,
   },
   "collaboration_panel": {
     "dock": "left",
-    "button": false
+    "button": false,
   },
   "outline_panel": {
     "dock": "left",
-    "button": false
+    "button": false,
   },
   "double_click_in_multibuffer": "open",
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": false,
   },
   "title_bar": {
-    "show_sign_in": false
-  }
+    "show_sign_in": false,
+  },
 }
