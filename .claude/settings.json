@@ -13,6 +13,7 @@
     "skill-creator@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
-  "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true
+  "tui": "default",
+  "theme": "dark",
+  "agentPushNotifEnabled": true
 }

@@ -48,6 +48,9 @@ if [ ! -d "$HOME/.claude" ]; then mkdir -p "$HOME/.claude"; fi
 ln -snf "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude/settings.json"
 ln -snf "$DOTFILES_DIR/.claude/statusline.sh" "$HOME/.claude/statusline.sh"
 
+if [ ! -d "$HOME/.claude-work" ]; then mkdir -p "$HOME/.claude-work"; fi
+ln -snf "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude-work/settings.json"
+
 # DefaultkeyBinding.dict (macOS)
 case "$OSTYPE" in
   darwin*)

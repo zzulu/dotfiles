@@ -87,3 +87,5 @@ fpath=("$HOME/.docker/completions" $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+alias claude-work='CLAUDE_CONFIG_DIR=~/.claude-work claude'
