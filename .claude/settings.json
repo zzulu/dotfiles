@@ -13,7 +13,7 @@
     "skill-creator@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
-  "tui": "default",
+  "tui": "fullscreen",
   "theme": "dark",
   "agentPushNotifEnabled": true
 }
