@@ -17,6 +17,9 @@
   },
   "format_on_save": "off",
   "agent": {
+    "auto_compact": {
+      "threshold": "90%"
+    },
     "default_model": {
       "provider": "openai-subscribed",
       "model": "gpt-5.5",
@@ -29,8 +32,7 @@
     "model_parameters": [],
   },
   "seed_search_query_from_cursor": "selection",
-  "agent_servers": {},
-  "disable_ai": false,
+  "disable_ai": true,
   "edit_predictions": {
     "provider": "copilot",
   },
