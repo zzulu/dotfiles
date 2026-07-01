@@ -1,5 +1,6 @@
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+export HOMEBREW_NO_ENV_HINTS=1
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
