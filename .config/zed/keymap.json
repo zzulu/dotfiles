@@ -25,5 +25,22 @@
         "\u001b\r"
       ]
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": true
+        }
+      ],
+      "alt-cmd-o": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": true
+        }
+      ]
+    }
   }
 ]
