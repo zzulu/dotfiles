@@ -80,7 +80,7 @@ esac
 ta() {
   local session
   session=$(tmux ls 2>/dev/null | fzf --height 40% --reverse | cut -d: -f1)
-  [[ -n "$session" ]] && tmux attach -t "$session"
+  [[ -n "$session" ]] && tmux attach -d -t "$session"
 }
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
