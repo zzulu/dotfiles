@@ -6,7 +6,9 @@
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
-  "enabledPlugins": {},
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true
+  },
   "alwaysThinkingEnabled": true,
   "tui": "fullscreen",
   "theme": "dark",

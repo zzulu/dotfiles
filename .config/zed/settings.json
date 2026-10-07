@@ -17,6 +17,9 @@
   },
   "format_on_save": "off",
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "auto_compact": {
       "threshold": "90%"
     },
@@ -27,7 +30,6 @@
       "effort": "medium",
     },
     "dock": "right",
-    "sidebar_side": "right",
     "favorite_models": [],
     "model_parameters": [],
   },
